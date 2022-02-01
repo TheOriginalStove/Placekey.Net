@@ -1,0 +1,9 @@
+{
+  "name": "Placekey.Docs",
+  "version": "1.0.0",
+  "description": "Documentation for Placekey.Net library",
+  "main": "index.js",
+  "repository": "https://github.com/TheOriginalStove/Placekey.Net",
+  "license": "Apache 2.0",
+  "private": false
+}
