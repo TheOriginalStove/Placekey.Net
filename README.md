@@ -1,4 +1,4 @@
-# Placekey.Net
+# PlacekeyNet
 
 A donet library for working with Placekeys. Will be available over NuGet.
 
