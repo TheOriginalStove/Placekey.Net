@@ -12,17 +12,13 @@ TODO: Add link to documentation
 
 #### Feature TODO list:
 
-###### Placekey API Endpoints
+###### Placekey functionality parity to placekey-py library
 
 | Feature | Status |
 | :------ | :----: |
 | Make Single Placekey request | |
 | Make Bulk Placekey request | |
 | Make Lineage Placekey request  | |
-
-###### Placekey Extensions and H3 helpers
-| Feature | Status |
-| :------ | :----: |
 | Convert Lat/Lng to Placekey | |
 | Convert from Placekey to Lat/Lng | |
 | Convert placekey to H3 | |
