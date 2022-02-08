@@ -21,6 +21,18 @@ TODO: Add link to documentation
 | Make Lineage Placekey request  | |
 
 ###### Placekey Extensions and H3 helpers
+| Feature | Status |
+| :------ | :----: |
+| Convert Lat/Lng to Placekey | |
+| Convert from Placekey to Lat/Lng | |
+| Convert placekey to H3 | |
+| Convert H3 to Placekey | |
+| Convert placekey to H3 Integer | |
+| Convert H3 Integer to Placekey | |
+| Get Neighboring Placekeys | |
+| Convert Placekey to Hex Boundary/Geoshape | |
+| Convert Placekey to Polygon | |
+| Other placekey-py/placekey/placekey.py function parity | |
 
 TODO: ADD ALL THESE
 
