@@ -10,8 +10,8 @@ namespace Placekey.Api.Tests
 {
     public class ApiConnectorTests
     {
-        [Fact(Skip = "Need to set up tests")]
-        public void RetryHandler_IsUsed()
+        [Fact]
+        public void ProcessErrors_ThrowsException()
         {
             throw new NotImplementedException();
         }
