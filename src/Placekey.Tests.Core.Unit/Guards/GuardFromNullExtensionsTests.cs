@@ -3,7 +3,7 @@ using Xunit;
 using FluentAssertions;
 using Placekey.Core;
 
-namespace Placekey.Tests;
+namespace Placekey.Tests.Core.Unit;
 
 public class GuardFromNullExtensionsTests
 {
