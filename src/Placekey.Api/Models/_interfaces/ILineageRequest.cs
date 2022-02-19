@@ -1,6 +1,5 @@
-﻿namespace Placekey.Core;
+﻿namespace Placekey.Api.Models;
 
 public interface ILineageRequest
 {
-    
 }

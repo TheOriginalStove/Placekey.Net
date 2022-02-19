@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
+﻿namespace Placekey.Api;
 
-namespace Placekey.Core;
-
-public interface IPlacekeyApiClient
+public interface IApiClient
 {
     /// <summary>
     /// Operations related to grabbing placekeys

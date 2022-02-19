@@ -1,4 +1,4 @@
-﻿namespace Placekey.Core;
+﻿namespace Placekey.Api;
 
 public interface ILineageClient
 {
