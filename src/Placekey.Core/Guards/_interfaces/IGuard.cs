@@ -1,5 +1,5 @@
 ﻿
-namespace Placekey.Core;
+namespace Placekey.Core
 {
     /// <summary>
     /// Simple interface to build guard extensions.
