@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Placekey.Core\Placekey.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions" />
+  </ItemGroup>
+
 </Project>
