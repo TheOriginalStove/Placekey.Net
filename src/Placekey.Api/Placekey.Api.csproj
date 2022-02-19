@@ -7,8 +7,4 @@
     <LangVersion>10.0</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Http\_interfaces" />
-  </ItemGroup>
-
 </Project>
