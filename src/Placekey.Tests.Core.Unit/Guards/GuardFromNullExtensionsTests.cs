@@ -71,4 +71,85 @@ public class GuardFromNullExtensionsTests
         act.Should().NotThrow<ArgumentException>();
     }
 
+    [Fact]
+    public void GuardFromNullOrWhitespace_ShouldThrowArgumentException()
+    {
+        // Arrange
+        string nullString = null;
+        string whitespace = "";
+
+        // Act
+        Action act1 = () => Guard.From.NullOrWhitespace(nullString, nameof(nullString));
+        Action act2 = () => Guard.From.NullOrWhitespace(whitespace, nameof(whitespace));
+
+        // Assert
+        act1.Should().Throw<ArgumentException>().Which.Message.Should().Contain("either null or whitespace");
+        act2.Should().Throw<ArgumentException>().Which.Message.Should().Contain("either null or whitespace");
+    }
+
+    [Fact]
+    public void GuardFromNullOrWhitespace_ShouldThrowArgumentException_WithCustomMessage()
+    {
+
+        // Arrange
+        string nullString = null;
+        string whitespace = "";
+        var message = "NullArgumentException is a path to the dark side. Null leads to anger; anger leads to hate; hate leads to suffering.";
+
+        // Act
+        Action act1 = () => Guard.From.NullOrWhitespace(nullString, nameof(nullString), message);
+        Action act2 = () => Guard.From.NullOrWhitespace(whitespace, nameof(whitespace), message);
+
+        // Assert
+        act1.Should().Throw<ArgumentException>().Which.Message.Should().Contain(message);
+        act2.Should().Throw<ArgumentException>().Which.Message.Should().Contain(message);
+    }
+
+    [Fact]
+    public void GuardFromNullOrEmpty_ShouldDoNothing()
+    {
+        // Arrange
+        var testString = "Feel the force!";
+
+        // Act
+        Action act = () => Guard.From.NullOrEmpty(testString, nameof(testString));
+
+        // Assert
+        act.Should().NotThrow<ArgumentException>();
+    }
+
+    [Fact]
+    public void GuardFromNullOrEmpty_ShouldThrowException()
+    {
+        // Arrange
+        string nullString = null;
+        var empty = "";
+
+        // Act
+        Action act1 = () => Guard.From.NullOrEmpty(nullString, nameof(nullString));
+        Action act2 = () => Guard.From.NullOrEmpty(empty, nameof(empty));
+
+        // Assert
+        act1.Should().Throw<ArgumentException>().Which.Message.Should().Contain("either null or empty");
+        act2.Should().Throw<ArgumentException>().Which.Message.Should().Contain("either null or empty");
+    }
+
+    [Fact]
+    public void GuardFromNullOrEmpty_ShouldThrowException_WithCustomMessage()
+    {
+        // Arrange
+        string nullString = null;
+        var empty = "";
+        var message = "Always pass on what you have learned";
+
+        // Act
+        Action act1 = () => Guard.From.NullOrEmpty(nullString, nameof(nullString), message);
+        Action act2 = () => Guard.From.NullOrEmpty(empty, nameof(empty), message);
+
+        // Assert
+        act1.Should().Throw<ArgumentException>().Which.Message.Should().Contain(message);
+        act2.Should().Throw<ArgumentException>().Which.Message.Should().Contain(message);
+    }
+
+
 }
