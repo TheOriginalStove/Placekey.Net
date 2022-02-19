@@ -1,4 +1,4 @@
-﻿namespace Placekey.Core
+﻿namespace Placekey.Core.Guards
 {
     public class Guard : IGuard
     {

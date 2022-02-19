@@ -89,3 +89,7 @@ public static partial class PlacekeyExtensions
 
 
 }
+
+public interface IPolygon
+{
+}

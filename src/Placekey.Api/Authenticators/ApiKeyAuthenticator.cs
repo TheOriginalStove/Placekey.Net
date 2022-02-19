@@ -14,7 +14,7 @@ namespace Placekey.Api.Authentication
 
         public Task Apply(IRequest request, IApiConnector apiConnector)
         {
-            Guard.Against.Null(request, nameof(request));
+            Guard.From.Null(request, nameof(request));
 
 
         }

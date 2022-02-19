@@ -25,3 +25,7 @@ public static partial class PlacekeyExtensions
     }
 
 }
+
+public class IH3Index
+{
+}

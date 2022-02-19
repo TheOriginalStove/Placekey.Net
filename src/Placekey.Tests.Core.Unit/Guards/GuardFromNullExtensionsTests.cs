@@ -1,6 +1,6 @@
 ﻿using Xunit;
 using FluentAssertions;
-using Placekey.Core;
+using Placekey.Core.Guards;
 
 namespace Placekey.Tests.Core.Unit;
 
@@ -17,11 +17,11 @@ public class GuardFromNullExtensionsTests
         var objectToTest = new Object();
 
         // Act
-        Action act1 = () => Guard.From.Null("", "string");
-        Action act2 = () => Guard.From.Null(1, "int");
-        Action act3 = () => Guard.From.Null(1.00, "double");
-        Action act4 = () => Guard.From.Null(DateTime.Now, "datetime");
-        Action act5 = () => Guard.From.Null(new Object(), "object");
+        Action act1 = () => Guard.From.Null(stringToTest, nameof(stringToTest));
+        Action act2 = () => Guard.From.Null(intToTest, nameof(intToTest));
+        Action act3 = () => Guard.From.Null(doubleToTest, nameof(doubleToTest));
+        Action act4 = () => Guard.From.Null(dateTimeToTest, nameof(dateTimeToTest));
+        Action act5 = () => Guard.From.Null(objectToTest, nameof(objectToTest));
 
         // Assert
         act1.Should().NotThrow<ArgumentNullException>();
@@ -65,7 +65,7 @@ public class GuardFromNullExtensionsTests
         string stringToTest = "Twenty points to Gryffindor!";
 
         // Act
-        Action act = () => Guard.From.NullOrWhiteSpace(stringToTest, nameof(stringToTest));
+        Action act = () => Guard.From.NullOrWhitespace(stringToTest, nameof(stringToTest));
 
         // Assert
         act.Should().NotThrow<ArgumentException>();
@@ -149,6 +149,37 @@ public class GuardFromNullExtensionsTests
         // Assert
         act1.Should().Throw<ArgumentException>().Which.Message.Should().Contain(message);
         act2.Should().Throw<ArgumentException>().Which.Message.Should().Contain(message);
+    }
+
+    [Fact]
+    public void GuardFromNullOrEmptyEnumerable_ShouldDoNothing()
+    {
+        // Arrange
+        var words = new List<string>();
+        words.Add("Obi Wan");
+        words.Add("Naboo");
+        words.Add("Darth Maul");
+
+        // Act
+        Action act = () => Guard.From.NullOrEmptyEnumerable(words, nameof(words));
+
+        // Assert
+        act.Should().NotThrow<ArgumentException>();
+    }
+
+    public void GuardFromNullOrEmptyEnumerable_ShouldThrowException()
+    {
+        // Arrange
+        var words = new List<string>();
+        List<string> emptyList = null;
+
+        // Act
+        Action act1 = () => Guard.From.NullOrEmptyEnumerable(words, nameof(words));
+        Action act2 = () => Guard.From.NullOrEmptyEnumerable(emptyList, nameof(emptyList));
+
+        // Assert
+        act1.Should().Throw<ArgumentException>().Which.Message.Should().Contain("is empty or null");
+        act2.Should().Throw<ArgumentException>().Which.Message.Should().Contain("is empty or null");
     }
 
 
