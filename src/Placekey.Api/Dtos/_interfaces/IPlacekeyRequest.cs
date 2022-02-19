@@ -1,6 +1,6 @@
-﻿namespace Placekey.Api.Models;
+﻿namespace Placekey.Api;
 
 public interface IPlacekeyRequest
 {
-    
+
 }

@@ -1,6 +1,7 @@
-﻿namespace Placekey.Api;
+﻿
+namespace Placekey.Api;
 
 public interface ILineageClient
 {
-    Task<LineageResponse> GetLineages(ILineageRequest request);
+    Task<ILineageResponse> GetLineages(ILineageRequest request);
 }
