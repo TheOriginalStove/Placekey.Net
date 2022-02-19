@@ -4,7 +4,7 @@ namespace Placekey.Api;
 
 public interface IPlacekeyClient
 {
-    Task<IPlacekeyResponse> GetPlacekey(IPlacekeyRequest request);
+    Task<PlacekeyResponse> GetPlacekey(IPlacekeyRequest request);
 
-    Task<IPlacekeyResponse> GetPlacekeys(IPlacekeyRequest request);
+    Task<PlacekeyResponse> GetPlacekeys(IPlacekeyRequest request);
 }

@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Placekey.Core", "Placekey.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Placekey.Api", "Placekey.Api\Placekey.Api.csproj", "{67F94DA6-0704-40B3-8CA2-D46D8F5BF4AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Placekey.Tests.Api.Integration", "Placekey.Tests.Api.Integration\Placekey.Tests.Api.Integration.csproj", "{D81CD959-144E-40DD-A1AA-F0646CA19211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Placekey.Tests.Api.Unit", "Placekey.Tests.Api.Unit\Placekey.Tests.Api.Unit.csproj", "{C1E6A79F-87DA-4FB7-B766-4870F2BD7B29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{67F94DA6-0704-40B3-8CA2-D46D8F5BF4AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F94DA6-0704-40B3-8CA2-D46D8F5BF4AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F94DA6-0704-40B3-8CA2-D46D8F5BF4AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D81CD959-144E-40DD-A1AA-F0646CA19211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81CD959-144E-40DD-A1AA-F0646CA19211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81CD959-144E-40DD-A1AA-F0646CA19211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81CD959-144E-40DD-A1AA-F0646CA19211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E6A79F-87DA-4FB7-B766-4870F2BD7B29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E6A79F-87DA-4FB7-B766-4870F2BD7B29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E6A79F-87DA-4FB7-B766-4870F2BD7B29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E6A79F-87DA-4FB7-B766-4870F2BD7B29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
